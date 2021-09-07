@@ -1,0 +1,524 @@
+[
+    {
+        "id": "38a25680cb82d2d7",
+        "type": "tab",
+        "label": "Wetterstation",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "435273512f84151a",
+        "type": "ui_tab",
+        "name": "Node-Red Wetterstation",
+        "icon": "wi-wu-sunny",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c8f102b73ae764e7",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "73fccdec.21cd94",
+        "type": "ui_tab",
+        "name": "Sonstiges",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ff83b773f46d80aa",
+        "type": "ui_group",
+        "name": "Wetterzustand",
+        "tab": "435273512f84151a",
+        "order": 1,
+        "disp": true,
+        "width": 5,
+        "collapse": false
+    },
+    {
+        "id": "372b89638dc9a957",
+        "type": "ui_group",
+        "name": "Regenwahrscheinlichkeit",
+        "tab": "435273512f84151a",
+        "order": 3,
+        "disp": true,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "825668f91210fe20",
+        "type": "ui_group",
+        "name": "Temperatur",
+        "tab": "435273512f84151a",
+        "order": 2,
+        "disp": true,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "b0ccf52bbefb9046",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "IoTB MQTT Broker",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a6d199d8.11b45",
+        "type": "ui_group",
+        "name": "Weather Icons",
+        "tab": "6531f3e5.98201c",
+        "order": 1,
+        "disp": true,
+        "width": "8"
+    },
+    {
+        "id": "6531f3e5.98201c",
+        "type": "ui_tab",
+        "name": "Weather",
+        "icon": "dashboard"
+    },
+    {
+        "id": "b7ab9c51aa7fd65b",
+        "type": "ui_slider",
+        "z": "38a25680cb82d2d7",
+        "name": "conditionSlider",
+        "label": "",
+        "tooltip": "",
+        "group": "ff83b773f46d80aa",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "conditionSlider",
+        "topicType": "str",
+        "min": 0,
+        "max": "4",
+        "step": 1,
+        "x": 280,
+        "y": 160,
+        "wires": [
+            [
+                "f0447dd5ed42b87d"
+            ]
+        ]
+    },
+    {
+        "id": "a70aeed26cd2fc56",
+        "type": "ui_text",
+        "z": "38a25680cb82d2d7",
+        "group": "ff83b773f46d80aa",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Wetter",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 770,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "8297bdf77deb1dc8",
+        "type": "ui_gauge",
+        "z": "38a25680cb82d2d7",
+        "name": "",
+        "group": "372b89638dc9a957",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Regenwahrscheinlichkeit",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 830,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "76e699855895b124",
+        "type": "ui_slider",
+        "z": "38a25680cb82d2d7",
+        "name": "rainSlider",
+        "label": "",
+        "tooltip": "",
+        "group": "372b89638dc9a957",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "all",
+        "topic": "rainSlider",
+        "topicType": "str",
+        "min": 0,
+        "max": "100",
+        "step": "10",
+        "x": 300,
+        "y": 380,
+        "wires": [
+            [
+                "f0447dd5ed42b87d"
+            ]
+        ]
+    },
+    {
+        "id": "5a6f8c6db6e14241",
+        "type": "ui_chart",
+        "z": "38a25680cb82d2d7",
+        "name": "",
+        "group": "825668f91210fe20",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperaturverlauf",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 810,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fed51bacaff92668",
+        "type": "ui_slider",
+        "z": "38a25680cb82d2d7",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "825668f91210fe20",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "temperatur",
+        "topicType": "str",
+        "min": "-10",
+        "max": "35",
+        "step": 1,
+        "x": 310,
+        "y": 500,
+        "wires": [
+            [
+                "f0447dd5ed42b87d"
+            ]
+        ]
+    },
+    {
+        "id": "6b7f0ba262b140d2",
+        "type": "inject",
+        "z": "38a25680cb82d2d7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "timestamp",
+        "payloadType": "date",
+        "x": 260,
+        "y": 580,
+        "wires": [
+            [
+                "f0447dd5ed42b87d"
+            ]
+        ]
+    },
+    {
+        "id": "cfdb71d074f2f957",
+        "type": "ui_text",
+        "z": "38a25680cb82d2d7",
+        "group": "825668f91210fe20",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperatur",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-spread",
+        "x": 790,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b5d95f7c0c449b98",
+        "type": "ui_template",
+        "z": "38a25680cb82d2d7",
+        "group": "ff83b773f46d80aa",
+        "name": "Wetter-Icon",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"display: flex;height: 100%;justify-content: center;align-items: center;\">\n<i class=\"fa-4x wi {{msg.payload}}\"></i>\n</div>\n<!--<img src=\"msg.payload\" />-->",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 790,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2225fb0d78d6e8bc",
+        "type": "mqtt out",
+        "z": "38a25680cb82d2d7",
+        "name": "Public Message: Weather condition",
+        "topic": "Wetterstation/Wetterzustand",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b0ccf52bbefb9046",
+        "x": 860,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ac12d81632020397",
+        "type": "mqtt out",
+        "z": "38a25680cb82d2d7",
+        "name": "Public Message: Probability of rain",
+        "topic": "Wetterstation/Regenwahrscheinlichkeit",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b0ccf52bbefb9046",
+        "x": 860,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a6a1edcb763f9522",
+        "type": "mqtt out",
+        "z": "38a25680cb82d2d7",
+        "name": "Public Message: Temperature",
+        "topic": "Wetterstation/Temperatur",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b0ccf52bbefb9046",
+        "x": 850,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3d22ab2843deaf46",
+        "type": "debug",
+        "z": "38a25680cb82d2d7",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "f0447dd5ed42b87d",
+        "type": "function",
+        "z": "38a25680cb82d2d7",
+        "name": "",
+        "func": "var stamp = context.get('timestamp')||0;\nvar temp = context.get('temperatur')||0;\nvar condition = context.get('wetterzustand')||0;\nvar probability = context.get('wahrscheinlichkeit')||0;\n\nswitch(msg.topic)\n{\n    case \"timestamp\":\n        context.set('timestamp', 1);\n        msg = null;\n        break;\n        \n    case \"temperatur\":\n        context.set('temperatur', msg.payload);\n        msg = null;\n        break;\n        \n    case \"conditionSlider\":\n        context.set('wetterzustand', msg.payload);\n        msg = null;\n        break;\n        \n    case \"rainSlider\":\n        context.set('wahrscheinlichkeit', msg.payload);\n        msg = null;\n        break;\n        \n    default:\n        msg = null;\n        break;\n}\n\nif(stamp === 1)\n{\n    stamp = context.get('timestamp')||0;\n    temp = context.get('temperatur')||0;\n    condition = context.get('wetterzustand')||0;\n    probability = context.get('wahrscheinlichkeit')||0;\n\n    if(condition == 0)\n    {\n        msg1 = {payload: \"sonnig\"};\n        msg4 = {payload: \"wi-wu-clear\"};\n    }\n    else if(condition == 1)\n    {\n        msg1 = {payload: \"bewölkt\"};\n        msg4 = {payload: \"wi-wu-cloudy\"};\n    }\n    else if(condition == 2)\n    {\n        if(temp > 0)\n        {\n            msg1 = {payload: \"leichter Regen\"};\n            msg4 = {payload: \"wi-wu-rain\"};\n        }\n        else\n        {\n            msg1 = {payload: \"Schnee\"};\n            msg4 = {payload: \"wi-wu-snow\"};\n        }\n    }\n    else if(condition == 3)\n    {\n        if(temp > 0)\n        {\n            msg1 = {payload: \"starker Regen\"};\n            msg4 = {payload: \"wi-wu-chancerain\"};\n        }\n        else\n        {\n            msg1 = {payload: \"starker Schneefall\"};\n            msg4 = {payload: \"wi-wu-flurries\"};\n        }\n    }\n    else if(condition == 4)\n    {\n        if(temp > 0)\n        {\n            msg1 = {payload: \"Gewitter\"};\n            msg4 = {payload: \"wi-wu-tstorms\"};\n        }\n        else\n        {\n            msg1 = {payload: \"Hagel\"};\n            msg4 = {payload: \"wi-darksky-tornado\"};\n        }\n    }\n    \n    if(condition >= 2)\n    {\n        var output = 100;\n        msg2 = {payload: output};\n    }\n    else\n    {\n        msg2 = {payload: probability};\n    }\n    \n    msg3 = {payload: temp};\n    \n     return [msg1, msg2, msg3, msg4];\n}\nelse\n{\n    return msg;\n}\n\n\n\n\n\n\n",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 380,
+        "wires": [
+            [
+                "a70aeed26cd2fc56",
+                "2225fb0d78d6e8bc"
+            ],
+            [
+                "8297bdf77deb1dc8",
+                "ac12d81632020397"
+            ],
+            [
+                "5a6f8c6db6e14241",
+                "cfdb71d074f2f957",
+                "a6a1edcb763f9522"
+            ],
+            [
+                "b5d95f7c0c449b98"
+            ],
+            [
+                "3d22ab2843deaf46"
+            ]
+        ]
+    }
+]
